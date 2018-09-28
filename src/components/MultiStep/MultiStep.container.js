@@ -1,18 +1,19 @@
 import React from "react";
-import getNavStates from "../../utils/getNavStates";
-import checkNavState from "../../utils/checkNavState";
+import getNavStates from "./utils/getNavStates";
+import checkNavState from "./utils/checkNavState";
+import Button from "../Button/Button.component";
+import Icon from "../Icon/Icon.component";
 
 class MultiStep extends React.Component {
   state = {
     showPreviousBtn: false,
     showNextBtn: true,
+    showSubmitBtn: false,
     compState: 0,
     navState: getNavStates(0, this.props.steps.length)
   };
 
   _setNavState = next => {
-    this.setState({ navState: getNavStates(next, this.props.steps.length) });
-
     if (next < this.props.steps.length) {
       this.setState({ compState: next });
     }
@@ -20,14 +21,18 @@ class MultiStep extends React.Component {
     this.setState(checkNavState(next, this.props.steps.length));
   };
 
-  _next = () => {
-    this._setNavState(this.state.compState + 1);
-  };
-
-  _previous = () => {
+  handlePrevious = () => {
     if (this.state.compState > 0) {
       this._setNavState(this.state.compState - 1);
     }
+  };
+
+  handleNext = () => {
+    this._setNavState(this.state.compState + 1);
+  };
+
+  handleSubmit = () => {
+    alert("Form submitted");
   };
 
   render() {
@@ -36,21 +41,30 @@ class MultiStep extends React.Component {
         {this.props.steps[this.state.compState].component}
 
         <div className="c-btn-container">
-          <button
-            style={this.state.showPreviousBtn ? {} : { display: "none" }}
-            className="c-btn c-btn--primary c-btn--action-prev"
-            onClick={this._previous}
+          <Button
+            buttonType="primary"
+            buttonAction="prev"
+            buttonOnClick={this.handlePrevious}
+            inlineStyles={this.state.showPreviousBtn ? {} : { display: "none" }}
           >
-            <span className="c-icon c-icon--white c-icon--arrow-left" />Previous
-          </button>
+            <Icon iconType="arrow-left" iconColor="white" />Previous
+          </Button>
 
-          <button
-            style={this.state.showNextBtn ? {} : { display: "none" }}
-            className="c-btn c-btn--primary"
-            onClick={this._next}
+          <Button
+            buttonType="primary"
+            buttonOnClick={this.handleNext}
+            inlineStyles={this.state.showNextBtn ? {} : { display: "none" }}
           >
-            Next<span className="c-icon c-icon--white c-icon--arrow-right" />
-          </button>
+            Next<Icon iconType="arrow-right" iconColor="white" />
+          </Button>
+
+          <Button
+            buttonType="primary"
+            buttonOnClick={this.handleSubmit}
+            inlineStyles={this.state.showSubmitBtn ? {} : { display: "none" }}
+          >
+            Next<Icon iconType="arrow-right" iconColor="white" />
+          </Button>
         </div>
       </React.Fragment>
     );

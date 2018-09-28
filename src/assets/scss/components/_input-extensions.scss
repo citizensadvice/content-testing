@@ -1,0 +1,16 @@
+/**
+ * @component: input of type 'inline'
+ */
+.c-input--inline {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.c-input--inline input {
+  max-width: 120px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
