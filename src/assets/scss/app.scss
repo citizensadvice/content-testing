@@ -1,11 +1,25 @@
-// framework
+// ====================================================================
+// @title: Application styles
+// @author: Citizens Advice
+// @created: 09/2018
+// ====================================================================
 //
+
+// VENDOR: third party libraries
 @import "node_modules/cadesignsystem/scss/cabui";
 
-// components
-//
-@import "components/input-extensions";
+// SETTINGS: global variables, config switches
 
-// helpers / utilities
-//
-@import "helpers/inline-paragraphs";
+// TOOLS: default mixins and functions
+
+// GENERIC: ground-zero styles (Normalize.css, resets, box-sizing)
+
+// ELEMENTS: unclassed HTML elements (type selectors)
+
+// OBJECTS: cosmetic-free design patterns
+
+// COMPONENTS: designed components, chunks of UI
+@import "components/c-input-extensions";
+
+// UTILITIES: helpers and overrides
+@import "utilities/u-inline-paragraphs";

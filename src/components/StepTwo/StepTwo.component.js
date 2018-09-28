@@ -13,7 +13,7 @@ const StepTwo = () => {
         </i>
       </p>
 
-      <div className="h-inlineParagraphs">
+      <div className="u-inlineParagraphs">
         <p>
           There are different calculation processes for private and social
           tenants. For both you’ll need to work out a
@@ -35,7 +35,7 @@ const StepTwo = () => {
         <p>of rent. These are called non-dependant deductions.</p>
       </div>
 
-      <div className="h-inlineParagraphs">
+      <div className="u-inlineParagraphs">
         <p>You shouldn't let a bailiff</p>
         <div className="c-input c-input--inline">
           <input id="firstname" type="text" required />
