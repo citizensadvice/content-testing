@@ -6,41 +6,54 @@ import Icon from "../Icon/Icon.component";
 
 class MultiStep extends React.Component {
   state = {
-    showPreviousBtn: false,
-    showNextBtn: true,
+    showNavigation: this.props.showNavigation,
     showSubmitBtn: false,
-    compState: 0,
-    navState: getNavStates(0, this.props.steps.length)
+    showStartBtn: true,
+    showPrevBtn: false,
+    showNextBtn: false,
+    currentIndex: 0
   };
 
   _setNavState = next => {
-    if (next < this.props.steps.length) {
-      this.setState({ compState: next });
+    if (next < this.props.views.length) {
+      this.setState({ currentIndex: next });
     }
 
-    this.setState(checkNavState(next, this.props.steps.length));
+    this.setState(checkNavState(next, this.props.views.length));
   };
 
   handlePrevious = () => {
-    if (this.state.compState > 0) {
-      this._setNavState(this.state.compState - 1);
+    if (this.state.currentIndex > 0) {
+      this._setNavState(this.state.currentIndex - 1);
     }
   };
 
   handleNext = () => {
-    this._setNavState(this.state.compState + 1);
+    this._setNavState(this.state.currentIndex + 1);
   };
 
   handleSubmit = () => {
     alert("Form submitted");
+    this._setNavState(this.state.currentIndex + 1);
   };
 
   render() {
     return (
       <React.Fragment>
-        {this.props.steps[this.state.compState].component}
+        {this.props.views[this.state.currentIndex].component}
 
-        <div className="c-btn-container">
+        <div
+          className="c-btn-container"
+          style={this.state.showNavigation ? {} : { display: "none" }}
+        >
+          <Button
+            buttonType="primary"
+            buttonOnClick={this.handleNext}
+            inlineStyles={this.state.showStartBtn ? {} : { display: "none" }}
+          >
+            Start<Icon iconType="arrow-right" iconColor="white" />
+          </Button>
+
           <Button
             buttonType="primary"
             buttonAction="prev"
@@ -63,7 +76,7 @@ class MultiStep extends React.Component {
             buttonOnClick={this.handleSubmit}
             inlineStyles={this.state.showSubmitBtn ? {} : { display: "none" }}
           >
-            Next<Icon iconType="arrow-right" iconColor="white" />
+            Submit tasks<Icon iconType="arrow-right" iconColor="white" />
           </Button>
         </div>
       </React.Fragment>

@@ -1,21 +1,31 @@
-const checkNavState = (currentStep, stepsLength) => {
-  if (currentStep > 0 && currentStep < stepsLength - 1) {
+const checkNavState = (currentIndex, stepsLength) => {
+  if (currentIndex === 0) {
     return {
-      showPreviousBtn: true,
-      showNextBtn: true,
+      showStartBtn: true,
+      showPreviousBtn: false,
+      showNextBtn: false,
       showSubmitBtn: false
     };
-  } else if (currentStep === 0) {
+  } else if (currentIndex === 4) {
     return {
-      showPreviousBtn: false,
+      showStartBtn: false,
+      showPreviousBtn: true,
+      showNextBtn: false,
+      showSubmitBtn: true
+    };
+  } else if (currentIndex > 0 && currentIndex < stepsLength - 1) {
+    return {
+      showStartBtn: false,
+      showPreviousBtn: true,
       showNextBtn: true,
       showSubmitBtn: false
     };
   } else {
     return {
-      showPreviousBtn: true,
+      showStartBtn: false,
+      showPreviousBtn: false,
       showNextBtn: false,
-      showSubmitBtn: true
+      showSubmitBtn: false
     };
   }
 };

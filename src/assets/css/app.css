@@ -1236,9 +1236,12 @@ legend {
   width: 100% !important;
 }
 
-/**
- * @component: input of type 'inline'
- */
+.c-label,
+.c-legend {
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
 .c-input--inline {
   display: inline-block;
   margin-left: 5px;

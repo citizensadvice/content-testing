@@ -19,7 +19,8 @@
 // OBJECTS: cosmetic-free design patterns
 
 // COMPONENTS: designed components, chunks of UI
-@import "components/c-input-extensions";
+@import "components/c--form-labels";
+@import "components/c--form-inputs";
 
 // UTILITIES: helpers and overrides
-@import "utilities/u-inline-paragraphs";
+@import "utilities/u--inline-paragraphs";
