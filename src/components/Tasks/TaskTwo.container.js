@@ -17,8 +17,10 @@ class TaskTwo extends React.Component {
             Fill in the blanks with whatever words you think fit best.
           </strong>
           <br />
-          If you aren't sure which word to use in a space, you can leave it
-          blank. There are no right or wrong answers
+          <span className="c-label__metainfo">
+            If you aren't sure which word to use in a space, you can leave it
+            blank. There are no right or wrong answers.
+          </span>
         </p>
 
         <div className="u-inlineParagraphs">
