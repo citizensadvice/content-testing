@@ -15,9 +15,36 @@ class TaskTwo extends React.Component {
           If you aren’t sure which word to use in a space, you can leave it
           blank.
         </p>
-        <p>
-          <strong>Test content coming soon...</strong>
-        </p>
+
+        <div className="u-inlineParagraphs">
+          <p>
+            The habitual residence test is carried out on most
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>
+            nationals who apply for benefits. The habitual
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>
+            part of the test is also carried out on some
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>
+            nationals who have been living or working abroad. However,
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>
+            nationals automatically have the right to reside so don't have to
+            satisfy the right to
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>
+            part of the
+            <div className="c-input c-input--inline">
+              <input id="firstname" type="text" required />
+            </div>.
+          </p>
+        </div>
       </React.Fragment>
     );
   }
