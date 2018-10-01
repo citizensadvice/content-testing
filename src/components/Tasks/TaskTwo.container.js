@@ -7,13 +7,18 @@ class TaskTwo extends React.Component {
         <h1>Fill in the blanks</h1>
         <p>
           We want to find out how clear our advice on complex legal issues is.
-          We’ve removed a few words from the paragraph below. Fill in the blanks
-          with whatever words you think fit best. There are no right or wrong
-          answers.
+          This is an excerpt from a page explaining the Habitual Residence Test,
+          which is used to determine whether someone has the right to live in
+          the UK as well as whether they intend to settle here. We've removed a
+          few words from the paragraph below.
         </p>
         <p>
-          If you aren’t sure which word to use in a space, you can leave it
-          blank.
+          <strong>
+            Fill in the blanks with whatever words you think fit best.
+          </strong>
+          <br />
+          If you aren't sure which word to use in a space, you can leave it
+          blank. There are no right or wrong answers
         </p>
 
         <div className="u-inlineParagraphs">
