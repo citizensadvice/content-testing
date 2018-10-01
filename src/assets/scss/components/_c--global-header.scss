@@ -1,0 +1,40 @@
+// ========================================================
+// @component: global header
+// ========================================================
+//
+
+// component config
+//
+$global-heading-nav-padding-vertical: 13px;
+$global-header-bp-sm: $bp--sm;
+
+// component block
+//
+.c-global-header {
+  overflow: hidden;
+
+  &__product-title {
+    @media (min-width: $global-header-bp-sm) {
+      display: inline-block;
+    }
+
+    a,
+    a:hover {
+      border: 0;
+      background-color: transparent;
+      display: inline-block;
+    }
+  }
+
+  &__navigation {
+    display: block;
+    @include remcalc(padding-bottom, $global-heading-nav-padding-vertical);
+
+    @media (min-width: $global-header-bp-sm) {
+      display: inline-block;
+      float: right;
+      vertical-align: top;
+      @include remcalc(padding-top, $global-heading-nav-padding-vertical);
+    }
+  }
+}

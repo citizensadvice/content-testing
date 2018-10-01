@@ -1256,9 +1256,43 @@ legend {
   padding-right: 10px;
 }
 
-/**
-* Helper classes
-*/
+.c-global-header {
+  overflow: hidden;
+}
+
+@media (min-width: 555px) {
+  .c-global-header__product-title {
+    display: inline-block;
+  }
+}
+
+.c-global-header__product-title a,
+.c-global-header__product-title a:hover {
+  border: 0;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.c-global-header__navigation {
+  display: block;
+  padding-bottom: 13px;
+  padding-bottom: 0.8125rem;
+}
+
+@media (min-width: 555px) {
+  .c-global-header__navigation {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    padding-top: 13px;
+    padding-top: 0.8125rem;
+  }
+}
+
+.c-btn--secondary {
+  background: white;
+}
+
 .u-inlineParagraphs {
   margin-top: 24px;
   margin-bottom: 40px;

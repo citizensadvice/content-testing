@@ -1,0 +1,15 @@
+// ========================================================
+// @component: buttons
+// ========================================================
+//
+
+// component config
+//
+$btn-secondary-bgcolor: $monochrome--white;
+
+// component block
+.c-btn {
+  &--secondary {
+    background: white;
+  }
+}
