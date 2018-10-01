@@ -47,7 +47,7 @@ class TaskFour extends React.Component {
                 type="radio"
               />
               <label htmlFor="checkCanReceiveBenefitsFromEea">
-                Check if you can get benefitsif you're from the EEA
+                Check if you can get benefits if you're from the EEA
               </label>
             </div>
           </div>

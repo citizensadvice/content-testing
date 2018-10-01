@@ -4,10 +4,10 @@ class Completion extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>You've completed all the tasks for this content</h1>
+        <h1>Thanks for completing all the tasks</h1>
         <p>
-          Thanks for completing the tasks &ndash; your answers will help improve
-          the new advice for clients and other advisers.
+          Your answers will help improve our advice for clients and other
+          advisers.
         </p>
         <p>
           If you'd like to give extra feedback, email{" "}
@@ -15,17 +15,16 @@ class Completion extends React.Component {
             userresearch@citizensadvice.org.uk
           </a>
         </p>
-        <h3>More tasks</h3>
-        <ul>
+
+        <h3>Help improve some of our other advice</h3>
+        <ul className="o-list o-list--flat">
           <li>
-            <a href="#">Help improve our new advice about Universal Credit</a>
-            <br />
-            4 tasks (about 5 minutes to complete)
+            <a href="#">
+              Universal Credit - 4 tasks (about 5 minutes to complete)
+            </a>
           </li>
           <li>
-            <a href="#">Help improve our new advice about debt</a>
-            <br />
-            6 tasks (about 15 minutes to complete)
+            <a href="#">Debt - 6 tasks (about 15 minutes to complete)</a>
           </li>
         </ul>
       </React.Fragment>
