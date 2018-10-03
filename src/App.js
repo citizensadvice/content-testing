@@ -10,12 +10,12 @@ import TaskFive from "./components/Tasks/TaskFive.container";
 import Completion from "./components/Completion/Completion.container";
 
 const tasks = [
-  { name: "TaskOne", component: <TaskOne /> },
-  { name: "TaskTwo", component: <TaskTwo /> },
-  { name: "TaskThree", component: <TaskThree /> },
-  { name: "TaskFour", component: <TaskFour /> },
-  { name: "TaskFive", component: <TaskFive /> },
-  { name: "Completion", component: <Completion /> }
+  { name: "TaskOne", component: TaskOne },
+  { name: "TaskTwo", component: TaskTwo },
+  { name: "TaskThree", component: TaskThree },
+  { name: "TaskFour", component: TaskFour },
+  { name: "TaskFive", component: TaskFive },
+  { name: "Completion", component: Completion }
 ];
 
 class App extends React.Component {
