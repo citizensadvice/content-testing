@@ -1,102 +1,101 @@
 import React from "react";
 
-class TaskTwo extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Fill in the blanks</h1>
-        <p>
-          We want to find out how clear our advice on complex legal issues is.
-          This is an excerpt from a page explaining the Habitual Residence Test,
-          which is used to determine whether someone has the right to live in
-          the UK as well as whether they intend to settle here. We've removed a
-          few words from the paragraph below.
-        </p>
-        <p>
-          <strong>
-            Fill in the blanks with whatever words you think fit best.
-          </strong>
-          <br />
-          <span className="c-label__metainfo">
-            If you aren't sure which word to use in a space, you can leave it
-            blank. There are no right or wrong answers.
-          </span>
-        </p>
+const TaskTwo = ({ data, onChange }) => (
+  <React.Fragment>
+    <h1>Tell us where you'd look for advice</h1>
+    <p>
+      You’re advising a client who wants to apply for JSA. He’s Hungarian and
+      has been living the in UK for the past 3 years. He was working until a
+      week ago when he was made redundant.
+    </p>
 
-        <div className="u-inlineParagraphs">
-          <p>
-            The habitual residence test is carried out on most
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputOne"
-                id="taskTwoInputOne"
-                value={this.props.data.taskTwoInputOne}
-                onChange={this.props.onChange}
-              />
-            </span>
-            nationals who apply for benefits. The habitual
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputTwo"
-                id="taskTwoInputTwo"
-                value={this.props.data.taskTwoInputTwo}
-                onChange={this.props.onChange}
-              />
-            </span>
-            part of the test is also carried out on some
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputThree"
-                id="taskTwoInputThree"
-                value={this.props.data.taskTwoInputThree}
-                onChange={this.props.onChange}
-              />
-            </span>
-            nationals who have been living or working abroad. However,
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputFour"
-                id="taskTwoInputFour"
-                value={this.props.data.taskTwoInputFour}
-                onChange={this.props.onChange}
-              />
-            </span>
-            nationals automatically have the right to reside so don't have to
-            satisfy the right to
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputFive"
-                id="taskTwoInputFive"
-                value={this.props.data.taskTwoInputFive}
-                onChange={this.props.onChange}
-              />
-            </span>
-            part of the
-            <span className="c-input c-input--inline">
-              <input
-                required
-                type="text"
-                name="taskTwoInputSix"
-                id="taskTwoInputSix"
-                value={this.props.data.taskTwoInputSix}
-                onChange={this.props.onChange}
-              />
-            </span>.
-          </p>
+    <fieldset className="c-fieldset">
+      <legend className="c-label">
+        Which page do you think has the right advice for your client?
+        <span className="c-label__tag c-label__tag--optional">optional</span>
+        <span className="c-label__metainfo">
+          Choose the one you think would be most relevant. If you'd look on a
+          different page, select 'other' and tell us where.
+        </span>
+      </legend>
+
+      <div className="c-fieldset__item">
+        <div className="c-radio">
+          <input
+            type="radio"
+            id="checkCanGetJsa"
+            name="applyingForJsa"
+            value="checkCanGetJsa"
+            checked={data.applyingForJsa === "checkCanGetJsa"}
+            onChange={onChange}
+          />
+          <label htmlFor="checkCanGetJsa">Check if you can get JSA</label>
         </div>
-      </React.Fragment>
-    );
-  }
-}
+      </div>
+
+      <div className="c-fieldset__item">
+        <div className="c-radio">
+          <input
+            type="radio"
+            id="checkCanGetBenefitsIfFromEEA"
+            name="applyingForJsa"
+            value="checkCanGetBenefitsIfFromEEA"
+            checked={data.applyingForJsa === "checkCanGetBenefitsIfFromEEA"}
+            onChange={onChange}
+          />
+          <label htmlFor="checkCanGetBenefitsIfFromEEA">
+            Check if you can get benefits if you're from the EEA
+          </label>
+        </div>
+      </div>
+
+      <div className="c-fieldset__item">
+        <div className="c-radio">
+          <input
+            type="radio"
+            id="gatherEvidenceOfRightToReside"
+            name="applyingForJsa"
+            value="gatherEvidenceOfRightToReside"
+            checked={data.applyingForJsa === "gatherEvidenceOfRightToReside"}
+            onChange={onChange}
+          />
+          <label htmlFor="gatherEvidenceOfRightToReside">
+            Gathering evidence to prove your right to reside
+          </label>
+        </div>
+      </div>
+
+      <div className="c-fieldset__item">
+        <div className="c-radio">
+          <input
+            type="radio"
+            id="checkRedundancyIsfair"
+            name="applyingForJsa"
+            value="checkRedundancyIsfair"
+            checked={data.applyingForJsa === "checkRedundancyIsfair"}
+            onChange={onChange}
+          />
+          <label htmlFor="checkRedundancyIsfair">
+            Check if your redundancy is fair
+          </label>
+        </div>
+      </div>
+
+      <div className="c-fieldset__item">
+        <div className="c-radio">
+          <input
+            type="radio"
+            id="other"
+            name="applyingForJsa"
+            value="other"
+            checked={data.applyingForJsa === "other"}
+            onChange={onChange}
+          />
+          <label htmlFor="other">Other</label>
+        </div>
+      </div>
+    </fieldset>
+  </React.Fragment>
+);
 
 export default TaskTwo;
