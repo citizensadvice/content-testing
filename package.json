@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "cadesignsystem": "^1.0.9",
+    "firebase": "^5.5.2",
     "gh-pages": "^2.0.0",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4",
