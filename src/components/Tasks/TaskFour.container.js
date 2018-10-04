@@ -29,10 +29,15 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="carersAllowance"
-                value="carersAllowance"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="carersAllowance"
+                name="portugueseNationalClaimUc"
+                value="carersAllowance"
+                checked={
+                  this.props.data.portugueseNationalClaimUc ===
+                  "carersAllowance"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="carersAllowance">Carer's Allowance</label>
             </div>
@@ -41,10 +46,15 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="checkCanReceiveBenefitsFromEea"
-                value="checkCanReceiveBenefitsFromEea"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="checkCanReceiveBenefitsFromEea"
+                name="portugueseNationalClaimUc"
+                value="checkCanReceiveBenefitsFromEea"
+                checked={
+                  this.props.data.portugueseNationalClaimUc ===
+                  "checkCanReceiveBenefitsFromEea"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="checkCanReceiveBenefitsFromEea">
                 Check if you can get benefits if you're from the EEA
@@ -55,10 +65,15 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="eeaNationalsClaimBenefitsForFamilyMember"
-                value="eeaNationalsClaimBenefitsForFamilyMember"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="eeaNationalsClaimBenefitsForFamilyMember"
+                name="portugueseNationalClaimUc"
+                value="eeaNationalsClaimBenefitsForFamilyMember"
+                checked={
+                  this.props.data.portugueseNationalClaimUc ===
+                  "eeaNationalsClaimBenefitsForFamilyMember"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="eeaNationalsClaimBenefitsForFamilyMember">
                 EEA nationals &ndash; claiming benefits as a family member
@@ -69,10 +84,15 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="gatherEvidenceForRightToReside"
-                value="gatherEvidenceForRightToReside"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="gatherEvidenceForRightToReside"
+                name="portugueseNationalClaimUc"
+                value="gatherEvidenceForRightToReside"
+                checked={
+                  this.props.data.portugueseNationalClaimUc ===
+                  "gatherEvidenceForRightToReside"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="gatherEvidenceForRightToReside">
                 Gathering evidence to prove your right to reside
@@ -83,10 +103,15 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="checkCanPassHabitualResidenceTest"
-                value="checkCanPassHabitualResidenceTest"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="checkCanPassHabitualResidenceTest"
+                name="portugueseNationalClaimUc"
+                value="checkCanPassHabitualResidenceTest"
+                checked={
+                  this.props.data.portugueseNationalClaimUc ===
+                  "checkCanPassHabitualResidenceTest"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="checkCanPassHabitualResidenceTest">
                 Check if you can pass the habitual residence test
@@ -97,10 +122,12 @@ class TaskFour extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="other"
-                value="other"
-                name="portugueseNationalClaimUc"
                 type="radio"
+                id="other"
+                name="portugueseNationalClaimUc"
+                value="other"
+                checked={this.props.data.portugueseNationalClaimUc === "other"}
+                onChange={this.props.onChange}
               />
               <label htmlFor="other">Other</label>
             </div>

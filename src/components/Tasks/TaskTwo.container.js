@@ -26,30 +26,72 @@ class TaskTwo extends React.Component {
         <div className="u-inlineParagraphs">
           <p>
             The habitual residence test is carried out on most
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputOne"
+                id="taskTwoInputOne"
+                value={this.props.data.taskTwoInputOne}
+                onChange={this.props.onChange}
+              />
+            </span>
             nationals who apply for benefits. The habitual
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputTwo"
+                id="taskTwoInputTwo"
+                value={this.props.data.taskTwoInputTwo}
+                onChange={this.props.onChange}
+              />
+            </span>
             part of the test is also carried out on some
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputThree"
+                id="taskTwoInputThree"
+                value={this.props.data.taskTwoInputThree}
+                onChange={this.props.onChange}
+              />
+            </span>
             nationals who have been living or working abroad. However,
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputFour"
+                id="taskTwoInputFour"
+                value={this.props.data.taskTwoInputFour}
+                onChange={this.props.onChange}
+              />
+            </span>
             nationals automatically have the right to reside so don't have to
             satisfy the right to
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputFive"
+                id="taskTwoInputFive"
+                value={this.props.data.taskTwoInputFive}
+                onChange={this.props.onChange}
+              />
+            </span>
             part of the
-            <div className="c-input c-input--inline">
-              <input id="firstname" type="text" required />
-            </div>.
+            <span className="c-input c-input--inline">
+              <input
+                required
+                type="text"
+                name="taskTwoInputSix"
+                id="taskTwoInputSix"
+                value={this.props.data.taskTwoInputSix}
+                onChange={this.props.onChange}
+              />
+            </span>.
           </p>
         </div>
       </React.Fragment>

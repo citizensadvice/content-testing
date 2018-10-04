@@ -26,10 +26,14 @@ class TaskFive extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-checkbox">
               <input
-                id="howTimeAbroadAffectsBenefitClaims"
-                value="howTimeAbroadAffectsBenefitClaims"
-                name="returningFromAbroadPageLocation"
                 type="checkbox"
+                id="howTimeAbroadAffectsBenefitClaims"
+                name="returningFromAbroadPageLocation"
+                value="howTimeAbroadAffectsBenefitClaims"
+                checked={this.props.data.returningFromAbroadPageLocation.includes(
+                  "howTimeAbroadAffectsBenefitClaims"
+                )}
+                onChange={this.props.onChange}
               />
               <label htmlFor="howTimeAbroadAffectsBenefitClaims">
                 How time spent abroad affects benefit claims
@@ -40,10 +44,14 @@ class TaskFive extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-checkbox">
               <input
-                id="stepsWhenReturningToUk"
-                value="stepsWhenReturningToUk"
-                name="returningFromAbroadPageLocation"
                 type="checkbox"
+                id="stepsWhenReturningToUk"
+                name="returningFromAbroadPageLocation"
+                value="stepsWhenReturningToUk"
+                checked={this.props.data.returningFromAbroadPageLocation.includes(
+                  "stepsWhenReturningToUk"
+                )}
+                onChange={this.props.onChange}
               />
               <label htmlFor="stepsWhenReturningToUk">
                 Steps to take when returning to the UK
@@ -54,10 +62,14 @@ class TaskFive extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-checkbox">
               <input
-                id="infoForIrishCitizens"
-                value="infoForIrishCitizens"
-                name="returningFromAbroadPageLocation"
                 type="checkbox"
+                id="infoForIrishCitizens"
+                name="returningFromAbroadPageLocation"
+                value="infoForIrishCitizens"
+                checked={this.props.data.returningFromAbroadPageLocation.includes(
+                  "infoForIrishCitizens"
+                )}
+                onChange={this.props.onChange}
               />
               <label htmlFor="infoForIrishCitizens">
                 Information for Irish citizens
@@ -68,10 +80,14 @@ class TaskFive extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-checkbox">
               <input
-                id="eligibilityCriteriaForBenefits"
-                value="eligibilityCriteriaForBenefits"
-                name="returningFromAbroadPageLocation"
                 type="checkbox"
+                id="eligibilityCriteriaForBenefits"
+                name="returningFromAbroadPageLocation"
+                value="eligibilityCriteriaForBenefits"
+                checked={this.props.data.returningFromAbroadPageLocation.includes(
+                  "eligibilityCriteriaForBenefits"
+                )}
+                onChange={this.props.onChange}
               />
               <label htmlFor="eligibilityCriteriaForBenefits">
                 Eligibility criteria for benefits
@@ -82,10 +98,14 @@ class TaskFive extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-checkbox">
               <input
-                id="other"
-                value="other"
-                name="returningFromAbroadPageLocation"
                 type="checkbox"
+                id="other"
+                name="returningFromAbroadPageLocation"
+                value="other"
+                checked={this.props.data.returningFromAbroadPageLocation.includes(
+                  "other"
+                )}
+                onChange={this.props.onChange}
               />
               <label htmlFor="other">Other</label>
             </div>

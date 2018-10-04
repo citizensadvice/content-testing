@@ -26,10 +26,12 @@ class TaskThree extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="checkCanGetJsa"
-                value="checkCanGetJsa"
-                name="applyingForJsa"
                 type="radio"
+                id="checkCanGetJsa"
+                name="applyingForJsa"
+                value="checkCanGetJsa"
+                checked={this.props.data.applyingForJsa === "checkCanGetJsa"}
+                onChange={this.props.onChange}
               />
               <label htmlFor="checkCanGetJsa">Check if you can get JSA</label>
             </div>
@@ -38,10 +40,15 @@ class TaskThree extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="checkCanGetBenefitsIfFromEEA"
-                value="checkCanGetBenefitsIfFromEEA"
-                name="applyingForJsa"
                 type="radio"
+                id="checkCanGetBenefitsIfFromEEA"
+                name="applyingForJsa"
+                value="checkCanGetBenefitsIfFromEEA"
+                checked={
+                  this.props.data.applyingForJsa ===
+                  "checkCanGetBenefitsIfFromEEA"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="checkCanGetBenefitsIfFromEEA">
                 Check if you can get benefits if you're from the EEA
@@ -52,10 +59,15 @@ class TaskThree extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="gatherEvidenceOfRightToReside"
-                value="gatherEvidenceOfRightToReside"
-                name="applyingForJsa"
                 type="radio"
+                id="gatherEvidenceOfRightToReside"
+                name="applyingForJsa"
+                value="gatherEvidenceOfRightToReside"
+                checked={
+                  this.props.data.applyingForJsa ===
+                  "gatherEvidenceOfRightToReside"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="gatherEvidenceOfRightToReside">
                 Gathering evidence to prove your right to reside
@@ -66,10 +78,14 @@ class TaskThree extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="checkRedundancyIsfair"
-                value="checkRedundancyIsfair"
-                name="applyingForJsa"
                 type="radio"
+                id="checkRedundancyIsfair"
+                name="applyingForJsa"
+                value="checkRedundancyIsfair"
+                checked={
+                  this.props.data.applyingForJsa === "checkRedundancyIsfair"
+                }
+                onChange={this.props.onChange}
               />
               <label htmlFor="checkRedundancyIsfair">
                 Check if your redundancy is fair
@@ -80,10 +96,12 @@ class TaskThree extends React.Component {
           <div className="c-fieldset__item">
             <div className="c-radio">
               <input
-                id="other"
-                value="other"
-                name="applyingForJsa"
                 type="radio"
+                id="other"
+                name="applyingForJsa"
+                value="other"
+                checked={this.props.data.applyingForJsa === "other"}
+                onChange={this.props.onChange}
               />
               <label htmlFor="other">Other</label>
             </div>
