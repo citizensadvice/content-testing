@@ -27,9 +27,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="carersAllowance"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="carersAllowance"
-            checked={data.portugueseNationalClaimUc === "carersAllowance"}
+            checked={data.task3 === "carersAllowance"}
             onChange={onChange}
           />
           <label htmlFor="carersAllowance">Carer's Allowance</label>
@@ -41,12 +41,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="checkCanReceiveBenefitsFromEea"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="checkCanReceiveBenefitsFromEea"
-            checked={
-              data.portugueseNationalClaimUc ===
-              "checkCanReceiveBenefitsFromEea"
-            }
+            checked={data.task3 === "checkCanReceiveBenefitsFromEea"}
             onChange={onChange}
           />
           <label htmlFor="checkCanReceiveBenefitsFromEea">
@@ -60,12 +57,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="eeaNationalsClaimBenefitsForFamilyMember"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="eeaNationalsClaimBenefitsForFamilyMember"
-            checked={
-              data.portugueseNationalClaimUc ===
-              "eeaNationalsClaimBenefitsForFamilyMember"
-            }
+            checked={data.task3 === "eeaNationalsClaimBenefitsForFamilyMember"}
             onChange={onChange}
           />
           <label htmlFor="eeaNationalsClaimBenefitsForFamilyMember">
@@ -79,12 +73,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="gatherEvidenceForRightToReside"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="gatherEvidenceForRightToReside"
-            checked={
-              data.portugueseNationalClaimUc ===
-              "gatherEvidenceForRightToReside"
-            }
+            checked={data.task3 === "gatherEvidenceForRightToReside"}
             onChange={onChange}
           />
           <label htmlFor="gatherEvidenceForRightToReside">
@@ -98,12 +89,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="checkCanPassHabitualResidenceTest"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="checkCanPassHabitualResidenceTest"
-            checked={
-              data.portugueseNationalClaimUc ===
-              "checkCanPassHabitualResidenceTest"
-            }
+            checked={data.task3 === "checkCanPassHabitualResidenceTest"}
             onChange={onChange}
           />
           <label htmlFor="checkCanPassHabitualResidenceTest">
@@ -117,9 +105,9 @@ const TaskThree = ({ data, onChange }) => (
           <input
             type="radio"
             id="other"
-            name="portugueseNationalClaimUc"
+            name="task3"
             value="other"
-            checked={data.portugueseNationalClaimUc === "other"}
+            checked={data.task3 === "other"}
             onChange={onChange}
           />
           <label htmlFor="other">Other</label>

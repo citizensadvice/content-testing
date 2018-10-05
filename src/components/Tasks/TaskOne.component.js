@@ -28,9 +28,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputOne"
-            id="taskTwoInputOne"
-            value={data.taskTwoInputOne}
+            id="task1InputOne"
+            name="task1InputOne"
+            value={data.task1InputOne}
             onChange={onChange}
           />
         </span>
@@ -39,9 +39,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputTwo"
-            id="taskTwoInputTwo"
-            value={data.taskTwoInputTwo}
+            id="task1InputTwo"
+            name="task1InputTwo"
+            value={data.task1InputTwo}
             onChange={onChange}
           />
         </span>
@@ -50,9 +50,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputThree"
-            id="taskTwoInputThree"
-            value={data.taskTwoInputThree}
+            id="task1InputThree"
+            name="task1InputThree"
+            value={data.task1InputThree}
             onChange={onChange}
           />
         </span>
@@ -61,9 +61,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputFour"
-            id="taskTwoInputFour"
-            value={data.taskTwoInputFour}
+            id="task1InputFour"
+            name="task1InputFour"
+            value={data.task1InputFour}
             onChange={onChange}
           />
         </span>
@@ -73,9 +73,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputFive"
-            id="taskTwoInputFive"
-            value={data.taskTwoInputFive}
+            id="task1InputFive"
+            name="task1InputFive"
+            value={data.task1InputFive}
             onChange={onChange}
           />
         </span>
@@ -84,9 +84,9 @@ const TaskOne = ({ data, onChange }) => (
           <input
             required
             type="text"
-            name="taskTwoInputSix"
-            id="taskTwoInputSix"
-            value={data.taskTwoInputSix}
+            id="task1InputSix"
+            name="task1InputSix"
+            value={data.task1InputSix}
             onChange={onChange}
           />
         </span>.

@@ -13,6 +13,13 @@ const checkNavState = (currentIndex, stepsLength) => {
       showNextBtn: false,
       showSubmitBtn: true
     };
+  } else if (currentIndex === 5) {
+    return {
+      showStartBtn: false,
+      showPreviousBtn: false,
+      showNextBtn: false,
+      showSubmitBtn: false
+    };
   } else if (currentIndex > 0 && currentIndex < stepsLength - 1) {
     return {
       showStartBtn: false,

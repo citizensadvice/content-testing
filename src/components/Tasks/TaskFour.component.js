@@ -24,11 +24,9 @@ const TaskFour = ({ data, onChange }) => (
           <input
             type="checkbox"
             id="howTimeAbroadAffectsBenefitClaims"
-            name="returningFromAbroadPageLocation"
+            name="task4"
             value="howTimeAbroadAffectsBenefitClaims"
-            checked={data.returningFromAbroadPageLocation.includes(
-              "howTimeAbroadAffectsBenefitClaims"
-            )}
+            checked={data.task4.includes("howTimeAbroadAffectsBenefitClaims")}
             onChange={onChange}
           />
           <label htmlFor="howTimeAbroadAffectsBenefitClaims">
@@ -42,11 +40,9 @@ const TaskFour = ({ data, onChange }) => (
           <input
             type="checkbox"
             id="stepsWhenReturningToUk"
-            name="returningFromAbroadPageLocation"
+            name="task4"
             value="stepsWhenReturningToUk"
-            checked={data.returningFromAbroadPageLocation.includes(
-              "stepsWhenReturningToUk"
-            )}
+            checked={data.task4.includes("stepsWhenReturningToUk")}
             onChange={onChange}
           />
           <label htmlFor="stepsWhenReturningToUk">
@@ -60,11 +56,9 @@ const TaskFour = ({ data, onChange }) => (
           <input
             type="checkbox"
             id="infoForIrishCitizens"
-            name="returningFromAbroadPageLocation"
+            name="task4"
             value="infoForIrishCitizens"
-            checked={data.returningFromAbroadPageLocation.includes(
-              "infoForIrishCitizens"
-            )}
+            checked={data.task4.includes("infoForIrishCitizens")}
             onChange={onChange}
           />
           <label htmlFor="infoForIrishCitizens">
@@ -78,11 +72,9 @@ const TaskFour = ({ data, onChange }) => (
           <input
             type="checkbox"
             id="eligibilityCriteriaForBenefits"
-            name="returningFromAbroadPageLocation"
+            name="task4"
             value="eligibilityCriteriaForBenefits"
-            checked={data.returningFromAbroadPageLocation.includes(
-              "eligibilityCriteriaForBenefits"
-            )}
+            checked={data.task4.includes("eligibilityCriteriaForBenefits")}
             onChange={onChange}
           />
           <label htmlFor="eligibilityCriteriaForBenefits">
@@ -96,9 +88,9 @@ const TaskFour = ({ data, onChange }) => (
           <input
             type="checkbox"
             id="other"
-            name="returningFromAbroadPageLocation"
+            name="task4"
             value="other"
-            checked={data.returningFromAbroadPageLocation.includes("other")}
+            checked={data.task4.includes("other")}
             onChange={onChange}
           />
           <label htmlFor="other">Other</label>
