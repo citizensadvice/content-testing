@@ -3,11 +3,12 @@ import GlobalHeader from "./components/GlobalHeader/GlobalHeader.component";
 import GlobalFooter from "./components/GlobalFooter/GlobalFooter.component";
 import MultiStep from "./components/MultiStep/MultiStep.container";
 import Intro from "./components/Intro/Intro.component";
-import TaskOne from "./components/Tasks/TaskOne.container";
-import TaskTwo from "./components/Tasks/TaskTwo.container";
-import TaskThree from "./components/Tasks/TaskThree.container";
-import TaskFour from "./components/Tasks/TaskFour.container";
-import Completion from "./components/Completion/Completion.container";
+import TaskOne from "./components/Tasks/TaskOne.component";
+import TaskTwo from "./components/Tasks/TaskTwo.component";
+import TaskThree from "./components/Tasks/TaskThree.component";
+import TaskFour from "./components/Tasks/TaskFour.component";
+import TaskCompletion from "./components/Tasks/TaskCompletion.component";
+import Completion from "./components/Completion/Completion.component";
 
 const allViews = [
   { name: "Intro", component: Intro },
@@ -15,6 +16,7 @@ const allViews = [
   { name: "TaskTwo", component: TaskTwo },
   { name: "TaskThree", component: TaskThree },
   { name: "TaskFour", component: TaskFour },
+  { name: "TaskCompletion", component: TaskCompletion },
   { name: "Completion", component: Completion }
 ];
 
