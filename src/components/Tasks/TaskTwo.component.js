@@ -24,9 +24,9 @@ const TaskTwo = ({ data, onChange }) => (
           <input
             type="radio"
             id="checkCanGetJsa"
-            name="applyingForJsa"
+            name="task2"
             value="checkCanGetJsa"
-            checked={data.applyingForJsa === "checkCanGetJsa"}
+            checked={data.task2 === "checkCanGetJsa"}
             onChange={onChange}
           />
           <label htmlFor="checkCanGetJsa">Check if you can get JSA</label>
@@ -38,9 +38,9 @@ const TaskTwo = ({ data, onChange }) => (
           <input
             type="radio"
             id="checkCanGetBenefitsIfFromEEA"
-            name="applyingForJsa"
+            name="task2"
             value="checkCanGetBenefitsIfFromEEA"
-            checked={data.applyingForJsa === "checkCanGetBenefitsIfFromEEA"}
+            checked={data.task2 === "checkCanGetBenefitsIfFromEEA"}
             onChange={onChange}
           />
           <label htmlFor="checkCanGetBenefitsIfFromEEA">
@@ -54,9 +54,9 @@ const TaskTwo = ({ data, onChange }) => (
           <input
             type="radio"
             id="gatherEvidenceOfRightToReside"
-            name="applyingForJsa"
+            name="task2"
             value="gatherEvidenceOfRightToReside"
-            checked={data.applyingForJsa === "gatherEvidenceOfRightToReside"}
+            checked={data.task2 === "gatherEvidenceOfRightToReside"}
             onChange={onChange}
           />
           <label htmlFor="gatherEvidenceOfRightToReside">
@@ -70,9 +70,9 @@ const TaskTwo = ({ data, onChange }) => (
           <input
             type="radio"
             id="checkRedundancyIsfair"
-            name="applyingForJsa"
+            name="task2"
             value="checkRedundancyIsfair"
-            checked={data.applyingForJsa === "checkRedundancyIsfair"}
+            checked={data.task2 === "checkRedundancyIsfair"}
             onChange={onChange}
           />
           <label htmlFor="checkRedundancyIsfair">
@@ -86,9 +86,9 @@ const TaskTwo = ({ data, onChange }) => (
           <input
             type="radio"
             id="other"
-            name="applyingForJsa"
+            name="task2"
             value="other"
-            checked={data.applyingForJsa === "other"}
+            checked={data.task2 === "other"}
             onChange={onChange}
           />
           <label htmlFor="other">Other</label>

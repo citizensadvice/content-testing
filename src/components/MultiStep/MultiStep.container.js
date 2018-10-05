@@ -13,15 +13,15 @@ class MultiStep extends React.Component {
     showNextBtn: false,
     currentIndex: 0,
     taskData: {
-      taskTwoInputOne: "",
-      taskTwoInputTwo: "",
-      taskTwoInputThree: "",
-      taskTwoInputFour: "",
-      taskTwoInputFive: "",
-      taskTwoInputSix: "",
-      applyingForJsa: "",
-      portugueseNationalClaimUc: "",
-      returningFromAbroadPageLocation: []
+      task1InputOne: "",
+      task1InputTwo: "",
+      task1InputThree: "",
+      task1InputFour: "",
+      task1InputFive: "",
+      task1InputSix: "",
+      task2: "",
+      task3: "",
+      task4: []
     }
   };
 
@@ -48,22 +48,33 @@ class MultiStep extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
-
-    // do firebase post here...
-    const testsRef = firebase.database().ref("tests");
-    testsRef.push(this.state.taskData);
+    const tasksRef = firebase.database().ref("tests");
+    const payload = {
+      task1: {
+        input1: this.state.taskData.task1InputOne,
+        input2: this.state.taskData.task1InputTwo,
+        input3: this.state.taskData.task1InputThree,
+        input4: this.state.taskData.task1InputFour,
+        input5: this.state.taskData.task1InputFive,
+        input6: this.state.taskData.task1InputSix
+      },
+      task2: this.state.taskData.task2,
+      task3: this.state.taskData.task3,
+      task4: this.state.taskData.task4
+    };
+    tasksRef.push(payload);
 
     this.setState({
       taskData: {
-        taskTwoInputOne: "",
-        taskTwoInputTwo: "",
-        taskTwoInputThree: "",
-        taskTwoInputFour: "",
-        taskTwoInputFive: "",
-        taskTwoInputSix: "",
-        applyingForJsa: "",
-        portugueseNationalClaimUc: "",
-        returningFromAbroadPageLocation: []
+        task1InputOne: "",
+        task1InputTwo: "",
+        task1InputThree: "",
+        task1InputFour: "",
+        task1InputFive: "",
+        task1InputSix: "",
+        task2: "",
+        task3: "",
+        task4: []
       }
     });
   };
