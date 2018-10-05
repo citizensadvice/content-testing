@@ -33,13 +33,15 @@ class MultiStep extends React.Component {
     this.setState(checkNavState(next, this.props.views.length));
   };
 
-  handlePrevious = () => {
+  handlePrevious = e => {
+    e.preventDefault();
     if (this.state.currentIndex > 0) {
       this._setNavState(this.state.currentIndex - 1);
     }
   };
 
-  handleNext = () => {
+  handleNext = e => {
+    e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
   };
 
@@ -97,7 +99,11 @@ class MultiStep extends React.Component {
     const Component = this.props.views[this.state.currentIndex].component;
     return (
       <React.Fragment>
-        <Component data={this.state.taskData} onChange={this.handleChange} />
+        <Component
+          data={this.state.taskData}
+          onChange={this.handleChange}
+          handleFeedbackLinks={this.handleNext}
+        />
 
         <div
           className="c-btn-container"
