@@ -1,141 +1,111 @@
 import React from "react";
 
-class TaskFour extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Tell us where you'd look for advice</h1>
-        <p>
-          You’re advising a client who is Portuguese and has been living in the
-          UK for 7 years. He has been working since he arrived in the country.
-          His mother is still living in Portugal, but has a medical condition
-          and is no longer able to live independently. Your client wants to know
-          whether he will be able to claim benefits for caring for his mother if
-          he moves her into his flat.
-        </p>
+const TaskFour = ({ data, onChange }) => (
+  <React.Fragment>
+    <h1>Tell us where you'd look for advice</h1>
+    <p>
+      You're in the Benefits section of the public website and you see this page
+      title:
+    </p>
 
-        <fieldset className="c-fieldset">
-          <legend className="c-label">
-            Which page do you think has the right advice for your client?
-            <span className="c-label__tag c-label__tag--optional">
-              optional
-            </span>
-            <span className="c-label__metainfo">
-              Choose the one you think would be most relevant. If you'd look on
-              a different page, select 'other' and tell us where.
-            </span>
-          </legend>
+    <h3>If you're a UK citizen returning from abroad</h3>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="carersAllowance"
-                name="portugueseNationalClaimUc"
-                value="carersAllowance"
-                checked={
-                  this.props.data.portugueseNationalClaimUc ===
-                  "carersAllowance"
-                }
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="carersAllowance">Carer's Allowance</label>
-            </div>
-          </div>
+    <fieldset className="c-fieldset">
+      <legend className="c-label">
+        Tell us what you'd expect to find on the page
+        <span className="c-label__tag c-label__tag--optional">optional</span>
+        <span className="c-label__metainfo">
+          You can choose more than one answer.
+        </span>
+      </legend>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="checkCanReceiveBenefitsFromEea"
-                name="portugueseNationalClaimUc"
-                value="checkCanReceiveBenefitsFromEea"
-                checked={
-                  this.props.data.portugueseNationalClaimUc ===
-                  "checkCanReceiveBenefitsFromEea"
-                }
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="checkCanReceiveBenefitsFromEea">
-                Check if you can get benefits if you're from the EEA
-              </label>
-            </div>
-          </div>
+      <div className="c-fieldset__item">
+        <div className="c-checkbox">
+          <input
+            type="checkbox"
+            id="howTimeAbroadAffectsBenefitClaims"
+            name="returningFromAbroadPageLocation"
+            value="howTimeAbroadAffectsBenefitClaims"
+            checked={data.returningFromAbroadPageLocation.includes(
+              "howTimeAbroadAffectsBenefitClaims"
+            )}
+            onChange={onChange}
+          />
+          <label htmlFor="howTimeAbroadAffectsBenefitClaims">
+            How time spent abroad affects benefit claims
+          </label>
+        </div>
+      </div>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="eeaNationalsClaimBenefitsForFamilyMember"
-                name="portugueseNationalClaimUc"
-                value="eeaNationalsClaimBenefitsForFamilyMember"
-                checked={
-                  this.props.data.portugueseNationalClaimUc ===
-                  "eeaNationalsClaimBenefitsForFamilyMember"
-                }
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="eeaNationalsClaimBenefitsForFamilyMember">
-                EEA nationals &ndash; claiming benefits as a family member
-              </label>
-            </div>
-          </div>
+      <div className="c-fieldset__item">
+        <div className="c-checkbox">
+          <input
+            type="checkbox"
+            id="stepsWhenReturningToUk"
+            name="returningFromAbroadPageLocation"
+            value="stepsWhenReturningToUk"
+            checked={data.returningFromAbroadPageLocation.includes(
+              "stepsWhenReturningToUk"
+            )}
+            onChange={onChange}
+          />
+          <label htmlFor="stepsWhenReturningToUk">
+            Steps to take when returning to the UK
+          </label>
+        </div>
+      </div>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="gatherEvidenceForRightToReside"
-                name="portugueseNationalClaimUc"
-                value="gatherEvidenceForRightToReside"
-                checked={
-                  this.props.data.portugueseNationalClaimUc ===
-                  "gatherEvidenceForRightToReside"
-                }
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="gatherEvidenceForRightToReside">
-                Gathering evidence to prove your right to reside
-              </label>
-            </div>
-          </div>
+      <div className="c-fieldset__item">
+        <div className="c-checkbox">
+          <input
+            type="checkbox"
+            id="infoForIrishCitizens"
+            name="returningFromAbroadPageLocation"
+            value="infoForIrishCitizens"
+            checked={data.returningFromAbroadPageLocation.includes(
+              "infoForIrishCitizens"
+            )}
+            onChange={onChange}
+          />
+          <label htmlFor="infoForIrishCitizens">
+            Information for Irish citizens
+          </label>
+        </div>
+      </div>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="checkCanPassHabitualResidenceTest"
-                name="portugueseNationalClaimUc"
-                value="checkCanPassHabitualResidenceTest"
-                checked={
-                  this.props.data.portugueseNationalClaimUc ===
-                  "checkCanPassHabitualResidenceTest"
-                }
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="checkCanPassHabitualResidenceTest">
-                Check if you can pass the habitual residence test
-              </label>
-            </div>
-          </div>
+      <div className="c-fieldset__item">
+        <div className="c-checkbox">
+          <input
+            type="checkbox"
+            id="eligibilityCriteriaForBenefits"
+            name="returningFromAbroadPageLocation"
+            value="eligibilityCriteriaForBenefits"
+            checked={data.returningFromAbroadPageLocation.includes(
+              "eligibilityCriteriaForBenefits"
+            )}
+            onChange={onChange}
+          />
+          <label htmlFor="eligibilityCriteriaForBenefits">
+            Eligibility criteria for benefits
+          </label>
+        </div>
+      </div>
 
-          <div className="c-fieldset__item">
-            <div className="c-radio">
-              <input
-                type="radio"
-                id="other"
-                name="portugueseNationalClaimUc"
-                value="other"
-                checked={this.props.data.portugueseNationalClaimUc === "other"}
-                onChange={this.props.onChange}
-              />
-              <label htmlFor="other">Other</label>
-            </div>
-          </div>
-        </fieldset>
-      </React.Fragment>
-    );
-  }
-}
+      <div className="c-fieldset__item">
+        <div className="c-checkbox">
+          <input
+            type="checkbox"
+            id="other"
+            name="returningFromAbroadPageLocation"
+            value="other"
+            checked={data.returningFromAbroadPageLocation.includes("other")}
+            onChange={onChange}
+          />
+          <label htmlFor="other">Other</label>
+        </div>
+      </div>
+    </fieldset>
+  </React.Fragment>
+);
 
 export default TaskFour;
