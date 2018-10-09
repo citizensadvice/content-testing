@@ -4,7 +4,7 @@ const TaskTwo = ({ data, onChange }) => (
   <React.Fragment>
     <h1>Tell us where you'd look for advice</h1>
     <p>
-      You’re advising a client who wants to apply for JSA. He’s Hungarian and
+      You're advising a client who wants to apply for JSA. He's Hungarian and
       has been living the in UK for the past 3 years. He was working until a
       week ago when he was made redundant.
     </p>

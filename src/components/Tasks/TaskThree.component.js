@@ -4,7 +4,7 @@ const TaskThree = ({ data, onChange }) => (
   <React.Fragment>
     <h1>Tell us where you'd look for advice</h1>
     <p>
-      You’re advising a client who is Portuguese and has been living in the UK
+      You're advising a client who is Portuguese and has been living in the UK
       for 7 years. He has been working since he arrived in the country. His
       mother is still living in Portugal, but has a medical condition and is no
       longer able to live independently. Your client wants to know whether he
