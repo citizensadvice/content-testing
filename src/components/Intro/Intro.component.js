@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => (
   <React.Fragment>
-    <h1>Help improve our new  benefits advice</h1>
+    <h1>Help improve our new benefits advice</h1>
     <p>
       We've written some new advice about benefits and we'd like your help to
       improve the content.
