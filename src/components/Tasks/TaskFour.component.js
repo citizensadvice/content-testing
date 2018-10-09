@@ -8,7 +8,9 @@ const TaskFour = ({ data, onChange }) => (
       title:
     </p>
 
-    <h3>If you're a UK citizen returning from abroad</h3>
+    <h3 className="u-spacingLeft--md u-spacingTop--xl u-spacingBottom--xl">
+      If you're a UK citizen returning from abroad
+    </h3>
 
     <fieldset className="c-fieldset">
       <legend className="c-label">
@@ -94,6 +96,20 @@ const TaskFour = ({ data, onChange }) => (
             onChange={onChange}
           />
           <label htmlFor="other">Other</label>
+        </div>
+
+        <div
+          className="c-input u-spacingTop--xs"
+          style={data.task4.includes("other") ? {} : { display: "none" }}
+        >
+          <input
+            required
+            type="text"
+            id="task4suggestion"
+            name="task4suggestion"
+            value={data.task4suggestion}
+            onChange={onChange}
+          />
         </div>
       </div>
     </fieldset>
