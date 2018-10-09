@@ -48,7 +48,14 @@ class MultiStep extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
-    const tasksRef = firebase.database().ref("tests");
+
+    // tell firebase how to structure the data under
+    // a specific key... "tasks" in this instance.
+    const tasksRef = firebase.database().ref("tasks");
+
+    // create a payload...
+    // could destructure this to give default values and neaten
+    // this up.
     const payload = {
       task1: {
         input1: this.state.taskData.task1InputOne,
@@ -62,8 +69,10 @@ class MultiStep extends React.Component {
       task3: this.state.taskData.task3,
       task4: this.state.taskData.task4
     };
+    // ...send the payload off to firebase.
     tasksRef.push(payload);
 
+    // reset the taskData state
     this.setState({
       taskData: {
         task1InputOne: "",
