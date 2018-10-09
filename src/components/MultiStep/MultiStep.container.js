@@ -20,8 +20,11 @@ class MultiStep extends React.Component {
       task1InputFive: "",
       task1InputSix: "",
       task2: "",
+      task2suggestion: "",
       task3: "",
-      task4: []
+      task3suggestion: "",
+      task4: [],
+      task4suggestion: ""
     }
   };
 
@@ -65,9 +68,18 @@ class MultiStep extends React.Component {
         input5: this.state.taskData.task1InputFive,
         input6: this.state.taskData.task1InputSix
       },
-      task2: this.state.taskData.task2,
-      task3: this.state.taskData.task3,
-      task4: this.state.taskData.task4
+      task2: {
+        selected: this.state.taskData.task2,
+        suggested: this.state.taskData.task2suggestion
+      },
+      task3: {
+        selected: this.state.taskData.task3,
+        suggested: this.state.taskData.task3suggestion
+      },
+      task4: {
+        selected: this.state.taskData.task4,
+        suggested: this.state.taskData.task4suggestion
+      }
     };
     // ...send the payload off to firebase.
     tasksRef.push(payload);
@@ -82,8 +94,11 @@ class MultiStep extends React.Component {
         task1InputFive: "",
         task1InputSix: "",
         task2: "",
+        task2suggestion: "",
         task3: "",
-        task4: []
+        task3suggestion: "",
+        task4: [],
+        task4suggestion: ""
       }
     });
   };

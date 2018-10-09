@@ -93,6 +93,20 @@ const TaskTwo = ({ data, onChange }) => (
           />
           <label htmlFor="other">Other</label>
         </div>
+
+        <div
+          className="c-input u-spacingTop--xs"
+          style={data.task2 === "other" ? {} : { display: "none" }}
+        >
+          <input
+            required
+            type="text"
+            id="task2suggestion"
+            name="task2suggestion"
+            value={data.task2suggestion}
+            onChange={onChange}
+          />
+        </div>
       </div>
     </fieldset>
   </React.Fragment>

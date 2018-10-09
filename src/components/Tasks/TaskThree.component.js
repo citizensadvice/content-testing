@@ -112,6 +112,20 @@ const TaskThree = ({ data, onChange }) => (
           />
           <label htmlFor="other">Other</label>
         </div>
+
+        <div
+          className="c-input u-spacingTop--xs"
+          style={data.task3 === "other" ? {} : { display: "none" }}
+        >
+          <input
+            required
+            type="text"
+            id="task3suggestion"
+            name="task3suggestion"
+            value={data.task3suggestion}
+            onChange={onChange}
+          />
+        </div>
       </div>
     </fieldset>
   </React.Fragment>
