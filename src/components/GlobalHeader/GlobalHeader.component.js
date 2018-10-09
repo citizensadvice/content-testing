@@ -8,11 +8,6 @@ const GlobalHeader = () => {
         <div className="c-global-header__product-title">
           <img src={logo} alt="Citizens Advice logo" />
         </div>
-        <div className="c-global-header__navigation u-position--right">
-          <a href="/" className="c-btn c-btn--secondary">
-            Return to dashboard
-          </a>
-        </div>
       </div>
     </header>
   );
