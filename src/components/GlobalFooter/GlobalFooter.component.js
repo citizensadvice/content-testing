@@ -2,9 +2,9 @@ import React from "react";
 
 const GlobalFooter = () => {
   return (
-    <footer className="c-global-footer u-spacingBottom--none">
+    <footer className="c-global-footer">
       <div className="c-wrap">
-        <p>
+        <p className="u-spacingBottom--none">
           Copyright &copy; 2018 Citizens Advice. All rights reserved.<br />
           Citizens Advice is an operating name of the National Association of
           Citizens Advice Bureaux. Registered charity number 279057 <br />

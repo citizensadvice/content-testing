@@ -1,0 +1,20 @@
+// ========================================================
+// @component: app-container
+// ========================================================
+//
+
+// component config
+//
+$container-min-height: 100vh;
+
+// component block
+//
+.c-app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: $container-min-height;
+}
+
+.c-sticky-footer__main {
+  flex: 1;
+}

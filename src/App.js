@@ -23,19 +23,21 @@ const allViews = [
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="c-app-container">
         <GlobalHeader />
 
-        <div className="c-wrap">
-          <div className="o-grid">
-            <div className="o-grid__unit o-grid__unit--t-2-3">
-              <MultiStep views={allViews} showNavigation />
+        <main className="c-app-content">
+          <div className="c-wrap">
+            <div className="o-grid">
+              <div className="o-grid__unit o-grid__unit--t-2-3">
+                  <MultiStep views={allViews} showNavigation />
+              </div>
             </div>
           </div>
-        </div>
+        </main>
 
         <GlobalFooter />
-      </React.Fragment>
+      </div>
     );
   }
 }
