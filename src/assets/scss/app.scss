@@ -19,9 +19,12 @@
 // OBJECTS: cosmetic-free design patterns
 
 // COMPONENTS: designed components, chunks of UI
+@import "components/c--app-container";
+@import "components/c--app-content";
 @import "components/c--form-labels";
 @import "components/c--form-inputs";
 @import "components/c--global-header";
+@import "components/c--global-footer";
 @import "components/c--buttons";
 
 // UTILITIES: helpers and overrides
