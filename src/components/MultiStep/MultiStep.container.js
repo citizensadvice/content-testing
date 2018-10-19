@@ -3,6 +3,7 @@ import checkNavState from "./utils/checkNavState";
 import Button from "../Button/Button.component";
 import Icon from "../Icon/Icon.component";
 import firebase from "../../utils/firebase";
+import { timestamp } from "../../utils/timestamp";
 
 class MultiStep extends React.Component {
   state = {
@@ -24,11 +25,11 @@ class MultiStep extends React.Component {
       task3: "",
       task3suggestion: "",
       task4: [],
-      task4suggestion: ""
-    }
+      task4suggestion: "",
+    },
   };
 
-  _setNavState = next => {
+  _setNavState = (next) => {
     if (next < this.props.views.length) {
       this.setState({ currentIndex: next });
     }
@@ -36,19 +37,19 @@ class MultiStep extends React.Component {
     this.setState(checkNavState(next, this.props.views.length));
   };
 
-  handlePrevious = e => {
+  handlePrevious = (e) => {
     e.preventDefault();
     if (this.state.currentIndex > 0) {
       this._setNavState(this.state.currentIndex - 1);
     }
   };
 
-  handleNext = e => {
+  handleNext = (e) => {
     e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
 
@@ -60,26 +61,27 @@ class MultiStep extends React.Component {
     // could destructure this to give default values and neaten
     // this up.
     const payload = {
+      id: timestamp.create(),
       task1: {
         input1: this.state.taskData.task1InputOne,
         input2: this.state.taskData.task1InputTwo,
         input3: this.state.taskData.task1InputThree,
         input4: this.state.taskData.task1InputFour,
         input5: this.state.taskData.task1InputFive,
-        input6: this.state.taskData.task1InputSix
+        input6: this.state.taskData.task1InputSix,
       },
       task2: {
         selected: this.state.taskData.task2,
-        suggested: this.state.taskData.task2suggestion
+        suggested: this.state.taskData.task2suggestion,
       },
       task3: {
         selected: this.state.taskData.task3,
-        suggested: this.state.taskData.task3suggestion
+        suggested: this.state.taskData.task3suggestion,
       },
       task4: {
         selected: this.state.taskData.task4,
-        suggested: this.state.taskData.task4suggestion
-      }
+        suggested: this.state.taskData.task4suggestion,
+      },
     };
     // ...send the payload off to firebase.
     tasksRef.push(payload);
@@ -98,15 +100,15 @@ class MultiStep extends React.Component {
         task3: "",
         task3suggestion: "",
         task4: [],
-        task4suggestion: ""
-      }
+        task4suggestion: "",
+      },
     });
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     // a little destructuring to get the inputs state
     const { checked, name, value, type } = e.currentTarget;
-    this.setState(prevState => {
+    this.setState((prevState) => {
       if (type === "checkbox") {
         return {
           // update the state based on whether the inputs are checked or not.
@@ -115,16 +117,16 @@ class MultiStep extends React.Component {
           taskData: Object.assign({}, prevState.taskData, {
             [name]: checked
               ? prevState.taskData[name].filter(Boolean).concat([value])
-              : prevState.taskData[name].filter(item => item !== value)
-          })
+              : prevState.taskData[name].filter((item) => item !== value),
+          }),
         };
       } else {
         return {
           // merge the previous state.taskData with a new object containing
           // the name and value variables assigned previously.
           taskData: Object.assign({}, prevState.taskData, {
-            [name]: value
-          })
+            [name]: value,
+          }),
         };
       }
     });
@@ -142,39 +144,40 @@ class MultiStep extends React.Component {
 
         <div
           className="c-btn-container"
-          style={this.state.showNavigation ? {} : { display: "none" }}
-        >
+          style={this.state.showNavigation ? {} : { display: "none" }}>
           <Button
             buttonType="primary"
             buttonOnClick={this.handleNext}
-            inlineStyles={this.state.showStartBtn ? {} : { display: "none" }}
-          >
-            Start<Icon iconType="arrow-right" iconColor="white" />
+            inlineStyles={this.state.showStartBtn ? {} : { display: "none" }}>
+            Start
+            <Icon iconType="arrow-right" iconColor="white" />
           </Button>
 
           <Button
             buttonType="primary"
             buttonAction="prev"
             buttonOnClick={this.handlePrevious}
-            inlineStyles={this.state.showPreviousBtn ? {} : { display: "none" }}
-          >
-            <Icon iconType="arrow-left" iconColor="white" />Previous
+            inlineStyles={
+              this.state.showPreviousBtn ? {} : { display: "none" }
+            }>
+            <Icon iconType="arrow-left" iconColor="white" />
+            Previous
           </Button>
 
           <Button
             buttonType="primary"
             buttonOnClick={this.handleNext}
-            inlineStyles={this.state.showNextBtn ? {} : { display: "none" }}
-          >
-            Next<Icon iconType="arrow-right" iconColor="white" />
+            inlineStyles={this.state.showNextBtn ? {} : { display: "none" }}>
+            Next
+            <Icon iconType="arrow-right" iconColor="white" />
           </Button>
 
           <Button
             buttonType="primary"
             buttonOnClick={this.handleSubmit}
-            inlineStyles={this.state.showSubmitBtn ? {} : { display: "none" }}
-          >
-            Submit tasks<Icon iconType="arrow-right" iconColor="white" />
+            inlineStyles={this.state.showSubmitBtn ? {} : { display: "none" }}>
+            Submit tasks
+            <Icon iconType="arrow-right" iconColor="white" />
           </Button>
         </div>
       </React.Fragment>
