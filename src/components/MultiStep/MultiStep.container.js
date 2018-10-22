@@ -29,6 +29,10 @@ class MultiStep extends React.Component {
     },
   };
 
+  componentDidMount() {
+    window.dataLayer.push({ page: 1 });
+  }
+
   _setNavState = (next) => {
     if (next < this.props.views.length) {
       this.setState({ currentIndex: next });
@@ -41,12 +45,14 @@ class MultiStep extends React.Component {
     e.preventDefault();
     if (this.state.currentIndex > 0) {
       this._setNavState(this.state.currentIndex - 1);
+      window.dataLayer.push({ page: this.state.currentIndex - 2 });
     }
   };
 
   handleNext = (e) => {
     e.preventDefault();
     this._setNavState(this.state.currentIndex + 1);
+    window.dataLayer.push({ page: this.state.currentIndex + 2 });
   };
 
   handleSubmit = (e) => {
@@ -103,6 +109,7 @@ class MultiStep extends React.Component {
         task4suggestion: "",
       },
     });
+    window.dataLayer.push({ page: this.state.currentIndex + 2 });
   };
 
   handleChange = (e) => {
