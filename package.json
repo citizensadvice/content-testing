@@ -23,7 +23,7 @@
     "cadesignsystem": "^1.0.9",
     "firebase": "^5.5.2",
     "gh-pages": "^2.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.4",
     "npm-run-all": "^4.1.3"
   }
